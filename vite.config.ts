@@ -23,7 +23,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: resolve(dirname, "src/index.ts"),
       formats: ["es"],
       fileName: () => "index.js",
     },
