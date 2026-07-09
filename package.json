@@ -1,8 +1,13 @@
 {
-  "name": "design-system",
-  "private": true,
+  "name": "@dindin/design-system",
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,6 +15,13 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
@@ -40,6 +52,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.62.0",
     "vite": "^8.1.1",
+    "vite-plugin-dts": "^5.0.3",
     "vitest": "^4.1.10"
   }
 }
