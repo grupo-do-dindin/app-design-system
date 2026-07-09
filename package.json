@@ -1,5 +1,5 @@
 {
-  "name": "@dindin/design-system",
+  "name": "@grupo-do-dindin/design-system",
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -8,6 +8,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
